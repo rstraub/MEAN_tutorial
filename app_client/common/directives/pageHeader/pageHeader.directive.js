@@ -10,7 +10,7 @@
       scope: {
         content: '=content'
       },
-      templateUrl: '/common/directives/pageHeader/pageHeader.template.hmtl'
+      templateUrl: '/common/directives/pageHeader/pageHeader.template.html'
     };
   }
 }());
