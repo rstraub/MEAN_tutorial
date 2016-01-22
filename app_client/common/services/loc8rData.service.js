@@ -10,8 +10,16 @@
     var locationByCoords = function(lat, lng) {
       return $http.get('/api/locations?lng=' + lng + '&lat=' + lat + '&maxDistance=20');
     };
+    var locationById = function(locationid) {
+      return $http.get('/api/locations/' + locationid);
+    };
+    var addReviewById = function(locationid, reviewData) {
+      return $http.post('/api/locations/' + locationid + '/reviews', reviewData);
+    };
     return {
-      locationByCoords: locationByCoords
+      locationByCoords: locationByCoords,
+      locationById: locationById,
+      addReviewById: addReviewById
     };
   }
 
